@@ -1,0 +1,17 @@
+{
+    "name": "carlosgabriel/cpl",
+    "description": "Aplicativo para auxiliar as atividades do Departamento de Licitacoes da PMT",
+    "authors": [
+        {
+            "name": "Carlos Gabriel da Silva Pereira",
+            "email": "carlosgabriel.sp@live.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "CG\\" : "src",
+            "App\\" : "app"
+        }
+    }
+}
