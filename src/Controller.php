@@ -4,8 +4,8 @@ namespace CG;
 
 class Controller
 {
-    function handler()
+    protected function handler()
     {
-        echo "Classe Controller";
+        return self::class;
     }
 }
