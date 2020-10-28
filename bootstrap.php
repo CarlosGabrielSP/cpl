@@ -1,7 +1,11 @@
 <?php
 
+use CG\Router;
+
 require_once __DIR__ . "/vendor/autoload.php";
 
-$controller = new \CG\Controller();
+$rotas = require_once __DIR__ . "/rotas.php";
 
-$controller->handler();
+$router = new Router($rotas);
+
+$router->handler();
