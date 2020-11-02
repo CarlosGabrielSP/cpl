@@ -1,0 +1,42 @@
+body{
+	background-color: #EDEDED;
+}
+hr{
+	background-color: #cfcfcf;
+}
+.barra-superior{
+	color: #fff;
+	background-color: #9FA4C4;
+}
+.barra-superior .h-menu{
+	background-color: transparent;
+}
+.barra-lateral{
+	height: 100vh;
+	border-top: 1px solid #ccc;
+	padding: 20px 10px;
+	background-color: #5de6de;
+	background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+	overflow: hidden;
+}
+.barra-lateral .v-menu{
+	background-color: transparent;
+}
+
+.conteudo{
+	padding: 10px 20px;
+}
+.pesquisa{
+	position: absolute;
+	bottom: 30px;
+	margin-right: 10px;
+}
+.lista-links li a{
+	padding-left: 15px;
+}
+.placa{
+	margin: 10px;
+}
+.painel .panel-content{
+	padding: 0!important;
+}

@@ -8,7 +8,7 @@ class TesteController extends Controller
 {
     public function index()
     {
-        echo "Hello Word";
+        $this->view("home", ['nome' => $_GET['nome']]);
     }
 
     public function create()

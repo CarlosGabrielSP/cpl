@@ -4,8 +4,9 @@ namespace CG;
 
 class Controller
 {
-    protected function handler()
+    protected function view(String $view = null, array $dados = [])
     {
-        return self::class;
+        extract($dados);
+        require __DIR__ . "/../templates/" . $view . ".tpl.php";
     }
 }
