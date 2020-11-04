@@ -13,11 +13,9 @@
 		<div class="row no-gap">
 			<!-- <div class="cell">
 				<nav class="barra-superior">
-					<ul class="h-menu">
-					    <li><a href="#">Home</a></li>
-					    <li><a href="#">Products</a></li>
-					    <li><a href="#">Support</a></li>
-					    <li><a href="#">Cart</a></li>
+					<ul class="fg-white h-menu">
+					    <li><a href="/"><strong>Home</strong></a></li>
+					    <li><a href="#">Links</a></li>
 					</ul>
 				</nav>
 			</div> -->
@@ -26,12 +24,17 @@
 			<div class="cell-2">
 				<section class="barra-lateral">
 					<ul class="v-menu">
-					    <li class="menu-title">General</li>
-					    <li class="fg-white"><a href="#"><span class="mif-home icon"></span> Home</a></li>
-					    <li class="menu-title">Products</li>
-					    <li class="fg-white"><a href="#"><span class="mif-windows icon"></span> Windows</a></li>
-					    <li class="fg-white"><a href="#"><span class="mif-library icon"></span> Office 365</a></li>
-					    <li class="fg-white"><a href="#"><span class="mif-skype icon"></span> Skype</a></li>
+						<li class="menu-title">Principal</li>
+					    <li class="fg-white"><a href="/index.php"><span class="mif-home icon"></span> Início</a></li>
+					    <li class="menu-title">Opções</li>
+					    <li class="fg-white">
+					    	<a href="#"><span class="mif-add icon"></span> Cadastrar Novo</a>
+					    	<ul class="v-menu" data-role="dropdown">
+					            <li class="fg-white"><a href="/nova-guia.php">Guia</a></li>
+					            <li class="fg-white"><a href="#">Link</a></li>
+					        </ul>
+					    </li>
+					    <li class="fg-white"><a href="#"><span class="mif-windows icon"></span> Editar</a></li>
 					    <li class="menu-title">Outros Links</li>
 					    <li class="bg-green-hover fg-white"><a href="http://nie-tcmpa.droppages.com/painel-covid"><span class="mif-ambulance icon"></span> COVID-19</a></li>
 					</ul>
@@ -42,7 +45,6 @@
 			</div>
 			<div class="cell-10">
 				<section class="conteudo">
-					<div class="titulo-pagina">
-						<h1>Título da Página</h1>
-					</div>
-					<hr>
+					<!-- <h1>Comissão Permanente de Licitação</h1> -->
+
+					

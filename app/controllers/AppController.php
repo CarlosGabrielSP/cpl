@@ -4,11 +4,11 @@ namespace App\controllers;
 
 use CG\Controller;
 
-class TesteController extends Controller
+class AppController extends Controller
 {
     public function index()
     {
-        $this->view("home", ['nome' => $_GET['nome']]);
+        $this->view("app/index");
     }
 
     public function create()

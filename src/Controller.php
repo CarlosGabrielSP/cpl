@@ -7,6 +7,6 @@ class Controller
     protected function view(String $view = null, array $dados = [])
     {
         extract($dados);
-        require __DIR__ . "/../templates/" . $view . ".tpl.php";
+        require __DIR__ . "/../app/views/" . $view . ".tpl.php";
     }
 }

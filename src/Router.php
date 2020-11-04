@@ -33,8 +33,10 @@ class Router
         $method = $_SERVER['REQUEST_METHOD'];
         if(strlen($rota_acessada) > 1) $rota_acessada = rtrim($rota_acessada,'/');
         if($rota = $this->getInfoRota($rota_acessada,$method)){
+            
             $controller = new $rota[$method]['controller'];
             $action = $rota[$method]['action'];
+            // var_dump($controller);
             $controller->$action();
         } else {
             http_response_code(404);
