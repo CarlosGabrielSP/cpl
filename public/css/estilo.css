@@ -40,3 +40,8 @@ hr{
 .painel .panel-content{
 	padding: 0!important;
 }
+
+.lista-sub-menu{
+	margin: 0;
+	padding: 0;
+}

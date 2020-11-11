@@ -1,4 +1,5 @@
-<?php require_once __DIR__ . '/header.php'; ?>
+<?php include_once __DIR__ . "/../includes/header.tpl.php"; ?>
+
 <h1 class="sub_titulo"><small>Nova Guia</small></h1>
 <hr>
 <form>
@@ -36,4 +37,4 @@
 	</dir>
 </form>
 
-<?php require_once __DIR__ . '/footer.php'; ?>
+<?php include_once __DIR__ . '/../includes/footer.tpl.php'; ?>

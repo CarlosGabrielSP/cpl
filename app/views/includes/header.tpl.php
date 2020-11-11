@@ -23,24 +23,23 @@
 		<div class="row no-gap">
 			<div class="cell-2">
 				<section class="barra-lateral">
-					<ul class="v-menu">
-						<li class="menu-title">Principal</li>
-					    <li class="fg-white"><a href="/index.php"><span class="mif-home icon"></span> Início</a></li>
-					    <li class="menu-title">Opções</li>
-					    <li class="fg-white">
-					    	<a href="#"><span class="mif-add icon"></span> Cadastrar Novo</a>
-					    	<ul class="v-menu" data-role="dropdown">
-					            <li class="fg-white"><a href="/nova-guia.php">Guia</a></li>
-					            <li class="fg-white"><a href="#">Link</a></li>
-					        </ul>
-					    </li>
-					    <li class="fg-white"><a href="#"><span class="mif-windows icon"></span> Editar</a></li>
-					    <li class="menu-title">Outros Links</li>
-					    <li class="bg-green-hover fg-white"><a href="http://nie-tcmpa.droppages.com/painel-covid"><span class="mif-ambulance icon"></span> COVID-19</a></li>
-					</ul>
 					<div class="pesquisa">
 						<form action="index.html"><input type="text" data-role="input" name="pesquisa" data-clear-button="false" data-search-button="true"></form>
 					</div>
+					<ul class="v-menu">
+						<li class="menu-title">Principal</li>
+					    <li class="fg-white"><a href="/index"><span class="mif-home icon"></span> Início</a></li>
+						<li class="menu-title">Recursos</li>
+						<li class="fg-white"><a href="/recursos/links"><span class="mif-new-tab icon"></span> Links</a></li>
+						<li class="menu-title">Outros Links</li>
+					    <li class="bg-green-hover fg-white"><a href="http://nie-tcmpa.droppages.com/painel-covid"><span class="mif-ambulance icon"></span> COVID-19</a></li>
+						<li class="menu-title">Opções</li>
+						<li class="fg-white">
+							<ul class="lista-sub-menu border">
+								<?php if(isset($opcoes)) include $opcoes; ?>
+							</ul>
+						</li>
+					</ul>
 				</section>
 			</div>
 			<div class="cell-10">

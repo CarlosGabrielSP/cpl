@@ -23,7 +23,7 @@ class Router
     protected function getInfoRota($rota, $method)
     {
         if($this->rotaExiste($rota, $method)){
-            return $this->rotas[$rota];
+            return $this->rotas[$rota][$method];
         }
     }
 
@@ -32,11 +32,9 @@ class Router
         $rota_acessada = $_SERVER['PATH_INFO'] ?? '/';
         $method = $_SERVER['REQUEST_METHOD'];
         if(strlen($rota_acessada) > 1) $rota_acessada = rtrim($rota_acessada,'/');
-        if($rota = $this->getInfoRota($rota_acessada,$method)){
-            
-            $controller = new $rota[$method]['controller'];
-            $action = $rota[$method]['action'];
-            // var_dump($controller);
+        if($infoRota = $this->getInfoRota($rota_acessada,$method)){
+            $controller = new $infoRota['controller'];
+            $action = $infoRota['action'];
             $controller->$action();
         } else {
             http_response_code(404);
