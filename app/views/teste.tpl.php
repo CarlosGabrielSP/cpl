@@ -2,7 +2,5 @@
 
 
 foreach($dados as $grupo){
-   echo $grupo['Links'] = "AAAAA" . "<br>";
+   echo $grupo->getNome() . '<br>';
 }
-
-var_dump($dados);

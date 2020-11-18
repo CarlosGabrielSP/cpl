@@ -2,26 +2,23 @@
 
 namespace App\controllers;
 
-use App\models\Grupo_link;
-use App\models\Link;
 use CG\Controller;
+use App\models\entidades\Grupo_link;
+use App\models\entidades\Link;
 
 class LinksController extends Controller
 {
     public function links()
     {
-        
-        $this->view("recursos/links", "links");
-    }
-
-    public function guias()
-    {
-        $this->view("recursos/nova-guia", "links");
+        $grupoModel = new Grupo_link;
+        $listaGrupos = $grupoModel->buscaGruposDeLinks();
+        $this->view("recursos/links", null, ['listaGrupos' => $listaGrupos]);
     }
 
     public function teste(){
-        $grupo_link_Model = new Grupo_link;
-        
-        $this->view("teste", null, ['dados' => $grupo_link_Model->buscaTodos()]);
+        $linkModel = new Grupo_link;
+        $dados = $linkModel->buscaGruposDeLinks();
+        // var_dump($dados);
+        // $this->view("teste", null, ['dados' => $dados]);
     }
 }

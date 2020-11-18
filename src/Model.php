@@ -2,12 +2,10 @@
 
 namespace CG;
 
-use PDO;
 use ReflectionClass;
 
 class Model
 {
-     protected $conexao;
      protected $tabela;
 
      function __construct()
@@ -15,18 +13,22 @@ class Model
           $ref = new ReflectionClass($this);
           $classe = $ref->getShortName();
           $this->tabela = strtolower($classe);
-          $this->conexao = Conexao::getConexao();
+     }
+
+     public function getTabela(){
+          return $this->tabela;
      }
 
      public function buscaTodos()
-     {
-          $sql = "SELECT * FROM " . $this->tabela;
-          return $this->conexao->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-     }
+    {
+        $DAO = new DAO($this);
+        return $DAO->buscaTodos_DAO();
+    }
 
-     public function buscaPorId(int $id)
-     {
-          $sql = "SELECT * FROM " . $this->tabela . " WHERE id=" . $id;
-          return $this->conexao->query($sql)->fetch();
-     }
+    public function buscaPorId(int $id)
+    {
+          $DAO = new DAO($this);
+          return $DAO->buscaPorId_DAO($id);
+    }
 }
+

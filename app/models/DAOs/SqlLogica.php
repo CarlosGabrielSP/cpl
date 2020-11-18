@@ -1,14 +1,16 @@
-<?php
+<?php 
 
-namespace App\models;
+namespace App\logicas;
 
-use CG\Model;
+use CG\Conexao;
 
-class SqlModel extends Model
+class SqlLogica
 {
-    public function executa_sql(String $query){
+    public static function executa_sql(String $query){
+        $cnx = Conexao::getConexao();
         $query = trim($query);
-        $sth = $this->conexao->prepare($query);
+        $sth = $cnx->prepare($query);
+        
         if($sth->execute()){
             return ['resultado' => true, "msg" => "Comando SQL executado"];
         }

@@ -2,14 +2,15 @@
 
 namespace App\controllers;
 
-use App\models\SqlModel;
 use CG\Controller;
+use App\logicas\SqlLogica;
 
 class AppController extends Controller
 {
     public function index()
     {
         $this->view("app/index");
+        // $this->teste();
     }
 
     public function form_SQL()
@@ -19,9 +20,8 @@ class AppController extends Controller
 
     public function executa_SQL()
     {
-        $model = new SqlModel();
         $sql = trim($_POST['sql']);
-        $dados = $model->executa_sql($sql);
-        $this->view("app/sql", ['dados' => $dados, 'sql_value' => $sql]);
+        $dados = SqlLogica::executa_sql($sql);
+        $this->view("app/sql", null, ['dados' => $dados, 'sql_value' => $sql]);
     }
 }

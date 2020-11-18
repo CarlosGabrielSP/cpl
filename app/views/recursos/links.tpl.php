@@ -5,28 +5,24 @@
 <div class="grid">
 	<div class="row no-gap">
 <?php
-	if(isset($guias)):
-	foreach($guias as $g):
+	if($listaGrupos):
+	foreach($listaGrupos as $grupo):
 ?>
 		<div class="cel placa">
 			<div
-				data-title-caption="<?= $g['nome'] ?>"
+				data-title-caption="<?= $grupo->getNome() ?>"
 				class="painel" 
 				data-role="panel" 
-				data-collapsible="true" 
+				data-collapsible="true"
 				data-cls-panel="shadow-1">
 				<ul class="lista-links d-menu open pos-static">
-			<?php
-				foreach($g['links'] as $link):
-			?>
+				<?php foreach($grupo->getLinks() as $link): ?>
 	                <li>
-						<a href="<?= $link['endereco'] ?>" target="_blank" class="list-group-item list-group-item-action">
-							<?= $link['nome'] ?>
+						<a href="<?= $link->getEndereco() ?>" target="_blank" class="list-group-item list-group-item-action">
+							<?= $link->getNome() ?>
 						</a>
 					</li>
-			<?php
-				endforeach;
-			?>
+				<?php endforeach; ?>
 	            </ul>
 			</div>
 		</div>
