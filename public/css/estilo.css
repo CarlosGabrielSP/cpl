@@ -1,9 +1,37 @@
 body{
-	background-color: #EDEDED;
+	/*background-color: #EDEDED;*/
 }
+
 hr{
 	background-color: #cfcfcf;
 }
+
+h1, h2, h3, h4, h5{
+	color: #B58ECC!important;
+}
+
+.row{
+	margin: 0;
+}
+
+.cor-pri{
+	background-color: #B58ECC;
+	color: white;
+}
+.cor-pri:hover{
+	background-color: #8c6c9e;
+	color: white;
+}
+
+.cor-sec{
+	background-color: #5FE5DE;
+	color: black;
+}
+.cor-sec:hover{
+	background-color: #419793;
+	color: black;
+}
+
 .barra-superior{
 	color: #fff;
 	background-color: #9FA4C4;
@@ -24,7 +52,7 @@ hr{
 }
 
 .conteudo{
-	padding: 10px 20px;
+	padding: 0 20px;
 }
 .pesquisa{
 	position: absolute;
@@ -35,7 +63,7 @@ hr{
 	padding-left: 15px;
 }
 .placa{
-	margin: 10px;
+	margin: 10px 20px 10px 0;
 }
 .painel .panel-content{
 	padding: 0!important;
@@ -44,4 +72,13 @@ hr{
 .lista-sub-menu{
 	margin: 0;
 	padding: 0;
+}
+
+fieldset{
+	margin: 20px 0;
+	padding: 10px;
+}
+
+fieldset legend{
+	padding: 0 10px;
 }

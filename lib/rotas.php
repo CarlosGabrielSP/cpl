@@ -6,20 +6,6 @@ $rotas['/'] = [
         'action' => 'index'
     ]
 ];
-
-$rotas['/recursos/links'] = [
-    'GET' => [
-        'controller' => App\controllers\LinksController::class,
-        'action' => 'links'
-    ]
-];
-$rotas['/recursos/guias'] = [
-    'GET' => [
-        'controller' => App\controllers\LinksController::class,
-        'action' => 'guias'
-    ]
-];
-
 $rotas['/sql'] = [
     'GET' => [
         'controller' => App\controllers\AppController::class,
@@ -31,10 +17,28 @@ $rotas['/sql'] = [
     ]
 ];
 
+$rotas['/recursos/links'] = [
+    'GET' => [
+        'controller' => App\controllers\LinksController::class,
+        'action' => 'links'
+    ]
+];
+$rotas['/recursos/links/novo'] = [
+    'GET' => [
+        'controller' => App\controllers\LinksController::class,
+        'action' => 'form_novoLink'
+    ],
+    'POST' => [
+        'controller' => App\controllers\LinksController::class,
+        'action' => 'gravaLink'
+    ]
+];
+
 $rotas['/teste'] = [
     'GET' => [
         'controller' => App\controllers\LinksController::class,
         'action' => 'teste'
     ]
 ];
+
 return $rotas; 

@@ -3,14 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="../css/reset.css">
+
+	<link rel="stylesheet" href="/css/reset.css">
 	<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
-	<link rel="stylesheet" href="../css/estilo.css">
+	<link rel="stylesheet" href="/css/estilo.css">
+
+	<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+	
 	<title>CPL</title>
 </head>
 <body>
 	<main class="grid">
-		<div class="row no-gap">
+		<div class="row ">
 			<!-- <div class="cell">
 				<nav class="barra-superior">
 					<ul class="fg-white h-menu">
@@ -36,7 +40,7 @@
 						<li class="menu-title">Opções</li>
 						<li class="fg-white">
 							<ul class="lista-sub-menu border">
-								<?php if(isset($opcoes)) include $opcoes; ?>
+								<?php if(isset($menu_opcoes)) include $menu_opcoes; ?>
 							</ul>
 						</li>
 					</ul>

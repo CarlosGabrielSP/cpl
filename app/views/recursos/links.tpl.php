@@ -1,9 +1,9 @@
-<?php include_once __DIR__ . "/../includes/header.tpl.php"; ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/header.tpl.php"; ?>
 
 <h1><small>Links</small></h1>
 <hr>
 <div class="grid">
-	<div class="row no-gap">
+	<div class="row">
 <?php
 	if($listaGrupos):
 	foreach($listaGrupos as $grupo):
@@ -33,4 +33,4 @@
 	</div>
 </div>
 
-<?php include_once __DIR__ . '/../includes/footer.tpl.php'; ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/footer.tpl.php"; ?>
